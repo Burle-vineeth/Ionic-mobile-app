@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="center">
+    <form [formGroup]="loginForm">
+      <ion-card class="p-2">
+        <ion-card-header>
+          <ion-card-title color="success">Title</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <input autocomplete="off" type="email" placeholder="Ex: admin@gmail.com" (focus)="addingClass($event)"
+            (blur)="removeingClass($event)" formControlName="email">
+            <app-error-message message="*Email is required" [field]="loginForm.get('email')" error="required"></app-error-message>
+            <app-error-message message="*Email is Not Valid" [field]="loginForm.get('email')"  error="email"></app-error-message>
+          <input autocomplete="off" type="password" placeholder="atleast 8 characters" (focus)="addingClass($event)"
+            (blur)="removeingClass($event)" formControlName="password">
+            <app-error-message message="*Password is required" [field]="loginForm.get('password')" error="required"></app-error-message>
+        </ion-card-content>
+        <ion-button color="dark" expand="full" fill="clear" [disabled]="!loginForm.get('email')?.valid" (click)="forgotEmailPassword()">
+          Forget Email/password
+        </ion-button>
+        <ion-button color="success" expand="full" (click)="login()" [disabled]="!loginForm.valid">
+          Login
+        </ion-button>
+        <ion-button color="success" expand="full" fill="clear" (click)="register()">
+          Register
+        </ion-button>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

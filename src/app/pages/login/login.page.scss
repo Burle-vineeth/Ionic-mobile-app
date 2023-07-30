@@ -1,0 +1,23 @@
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    ion-card {
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+        }
+        input.focus {
+            border-bottom: 1px solid blue;
+            background-color: rgba(74, 137, 255, 0.253);
+        }
+    }
+}
+
+ion-content {
+    --background: var(--ion-color-success);
+}

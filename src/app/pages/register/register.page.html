@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="p-2">
+    <ion-card-header>
+      <ion-card-title>
+        What do you want to do with the Recycable waste?
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group value="CLIENT">
+        <ion-item>
+          <ion-label>
+            I want to BUY it.
+          </ion-label>
+          <ion-radio value="CLIENT" slot="start"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            I want to SELL it.
+          </ion-label>
+          <ion-radio value="PARTNER" slot="start"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="p-2">
+    <ion-card-header>
+      <ion-card-title>
+        Contact
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <input type="text" autocomplete="off" (focus)="addingClass($event)" (blur)="addingClass($event)" placeholder="Enter your Name">
+      <input type="email" autocomplete="off" (focus)="addingClass($event)" (blur)="addingClass($event)" placeholder="Enter your Email Id">
+      <input type="password" autocomplete="off" (focus)="addingClass($event)" (blur)="addingClass($event)" placeholder="Enter your password">
+      <input type="password" autocomplete="off" (focus)="addingClass($event)" (blur)="addingClass($event)" placeholder="Confirm your password">
+      <input type="tel" autocomplete="off" (focus)="addingClass($event)" (blur)="addingClass($event)" placeholder="Enter your Mobile Number">
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="mb-2" color="light" expand="full" (click)="register()">
+    Register
+  </ion-button>
+</ion-content>
+
+
+<!-- <ion-card-header>
+  <ion-card-title color="success">Title</ion-card-title>
+</ion-card-header>
+
+<ion-card-content>
+  <input autocomplete="off" type="email" placeholder="Ex: admin@gmail.com" (focus)="addingClass($event)"
+    (blur)="addingClass($event)">
+  <input autocomplete="off" type="password" placeholder="atleast 8 characters" (focus)="addingClass($event)"
+    (blur)="addingClass($event)">
+</ion-card-content>
+<ion-button color="dark" expand="full" fill="clear">
+  Forget Email/password
+</ion-button>
+<ion-button color="success" expand="full">
+  Login
+</ion-button>
+<ion-button color="success" expand="full" fill="clear">
+  Register
+</ion-button> -->

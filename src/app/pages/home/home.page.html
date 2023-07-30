@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons class="me-2" slot="end" (click)="loginPage()">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="../../../assets/images/rajini.jpeg" alt="">
+      </ion-avatar>
+      <ion-label>
+        <h1>
+          Rajinikanth
+        </h1>
+        <p>Thalaiva</p>
+      </ion-label>
+    </ion-item>
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="../../../assets/images/pawa.jpeg" alt="">
+      </ion-avatar>
+      <ion-label>
+        <h1>
+          Pawan kalyan
+        </h1>
+        <p>Power Star</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- <app-pickup-call-card [hasHeader]="true" [hasFooter]="true"></app-pickup-call-card> -->
+  <app-pickup-call-card status="hold" updateAt="25/04/2021" createdAt="24/04/2021"
+    notes="We have two bags of waste.">
+    <ion-card-subtitle header>
+      Last pickup call
+    </ion-card-subtitle>
+    <ion-button footer fill="clear" color="success" expand="full" (click)="goToPickUpCalls()">
+      See all...
+    </ion-button>
+  </app-pickup-call-card>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="newPickUPCall()">
+    <ion-fab-button color="success">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
